@@ -2,6 +2,7 @@ package com.esmt.pricing.controller;
 
 import com.esmt.pricing.dto.FareRequest;
 import com.esmt.pricing.dto.FareResponse;
+import com.esmt.pricing.entity.PricingRule;
 import com.esmt.pricing.service.PricingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,4 +25,5 @@ public class PricingController {
         // Le service retourne un FareResponse contenant le montant final et les détails des remises
         return ResponseEntity.ok(pricingService.calculateFare(request));
     }
+
 }
